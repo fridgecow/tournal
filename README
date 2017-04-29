@@ -1,3 +1,15 @@
+Xournal is old and its age is showing. Unfortunately, it's effectively the only fully-fledged, maintained software available.
+
+I have applied patches which add:
+- bookmarks
+- next/prev file in directory functionality
+- autoscroll to last opened page
+- go to next page with annotation
+
+None of the code is mine and it was all applied from patches found on the xournal sourceforge page, linked below.
+
+-------------
+
 Version 0.4.8 (June 30, 2014)
 
 Installation:  see INSTALL

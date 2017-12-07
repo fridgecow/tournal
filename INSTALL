@@ -17,6 +17,8 @@ Required packages and libraries:
 - poppler-glib 0.5.4 or later development packages
    (package poppler-glib-devel and dependencies)
 
+In Ubuntu, run `sudo apt install autoconf automake libgtk2.0-dev libgnomecanvas2-dev libpoppler-glib-dev` to install these dependencies
+
 * TO RUN xournal:
 
 - gtk+ 2.10 or later

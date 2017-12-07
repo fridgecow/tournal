@@ -291,7 +291,7 @@ create_winMain (void)
   GtkWidget *buttonNotablePage;
   GtkWidget *buttonNextPage;
   GtkWidget *buttonLastPage;
-  GtkWidget *toolitem22;
+  GtkWidget *toolitem23;
   GtkWidget *vseparator11;
   GtkWidget *buttonPrevFile;
   GtkWidget *buttonNextFile;
@@ -1602,13 +1602,13 @@ create_winMain (void)
   gtk_container_add (GTK_CONTAINER (toolbarMain), buttonLastPage);
   gtk_tool_item_set_tooltip (GTK_TOOL_ITEM (buttonLastPage), tooltips, _("Last Page"), NULL);
 
-  toolitem22 = (GtkWidget*) gtk_tool_item_new ();
-  gtk_widget_show (toolitem22);
-  gtk_container_add (GTK_CONTAINER (toolbarMain), toolitem22);
+  toolitem23 = (GtkWidget*) gtk_tool_item_new ();
+  gtk_widget_show (toolitem23);
+  gtk_container_add (GTK_CONTAINER (toolbarMain), toolitem23);
 
   vseparator11 = gtk_vseparator_new ();
   gtk_widget_show (vseparator11);
-  gtk_container_add (GTK_CONTAINER (toolitem22), vseparator11);
+  gtk_container_add (GTK_CONTAINER (toolitem23), vseparator11);
 
   buttonPrevFile = (GtkWidget*) gtk_tool_button_new_from_stock ("gtk-media-previous");
   gtk_widget_show (buttonPrevFile);

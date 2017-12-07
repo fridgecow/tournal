@@ -1,0 +1,36 @@
+--- src/xo-file.c	2009-09-28 18:36:05.000000000 -0500
++++ src/xo-file.c	2011-01-04 06:12:28.000000000 -0600
+@@ -583,7 +592,33 @@
+       attribute_values++;
+     }
+     if (has_attr!=31) *error = xoj_invalid();
++  }	 
++  /*-------------- bookmark viewer ---------------start---
++   * when read label Bookmark get correspond attributes
++   * for initialization of the bookmarks	  
++   *-------------- bookmark viewer -----------------------*/
++  else if (!strcmp(element_name, "Bookmark")) { 
++    //printf("NofBK:%d\n", NofBK);
++    while (*attribute_names!=NULL) {
++      if (!strcmp(*attribute_names, "Category")) {
++        bk[NofBK].category = g_strdup(*attribute_values);
++        //printf("Category:%s\n", *attribute_values);
++      }
++      else if (!strcmp(*attribute_names, "Page")) {
++        //bk[NofBK].page = g_strdup(*attribute_values);
++        bk[NofBK].page = g_ascii_strtod(*attribute_values, NULL);
++        //printf("Page:%s\n", *attribute_values);
++      }
++      else if (!strcmp(*attribute_names, "Path")) {
++        bk[NofBK].path = g_strdup(*attribute_values);
++        //printf("Path:%s\n", *attribute_values);
++      }
++      attribute_names++;
++      attribute_values++;
++    }
++    NofBK++;
+   }
++  /*-------------- bookmark viewer ---------------end---*/
+ }
+ 
+ void xoj_parser_end_element(GMarkupParseContext *context,

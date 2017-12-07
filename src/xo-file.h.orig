@@ -26,17 +26,6 @@ extern int GS_BITMAP_DPI, PDFTOPPM_PRINTING_DPI;
 #define AUTOSAVE_FILENAME_TEMPLATE "%s.autosave%d.xoj"
 #define AUTOSAVE_FILENAME_FILTER "%s.autosave*.xoj"
 
-/*--- for bookmark viewer ---start---*/
-typedef struct Bookmark {
-  gchar *category;
-  //gchar *page;
-  gdouble page;
-  gchar *path;
-} Bookmark;
-Bookmark bk[1000];
-int NofBK;
-/*--- for bookmark viewer ---end---*/
-
 void new_journal(void);
 gboolean save_journal(const char *filename, gboolean is_auto);
 gboolean close_journal(void);

@@ -296,15 +296,6 @@ gboolean save_journal(const char *filename, gboolean is_auto)
     }
     gzprintf(f, "</page>\n");
   }
-
-  /* ---write bookmarks to xoj file---start-- */
-  GtkTreeModel *model;
-
-  model = gtk_tree_view_get_model(GTK_TREE_VIEW(bkTree_view));
-  gtk_tree_model_foreach(model, (GtkTreeModelForeachFunc)
-                         save_bookmark2file_foreach, f);
-  /* ---write bookmarks to xoj file---end-- */
-
   gzprintf(f, "</xournal>\n");
   gzclose(f);
   setlocale(LC_NUMERIC, "");
